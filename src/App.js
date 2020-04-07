@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './components/Shared/Header'
+import Header from './components/shared/Header'
 import RentalHome from './pages/RentalHome'
 
 

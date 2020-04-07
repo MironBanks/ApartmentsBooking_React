@@ -45,17 +45,11 @@ class RentalHome extends React.Component {
         }
     }
 
-    renderRentals(rentals) {
-        const newRentals = rentals.map((rental) => {
-            return (
-                <div key={rental._id} className="col-md-3">
-                    <RentalCard rental={rental} />
-                </div>
-            )
-        });
-
-        return newRentals
-    }
+    renderRentals = (rentals) => rentals.map(rental =>
+        <div key={rental._id} className="col-md-3">
+            <RentalCard rental={rental} />
+        </div>
+    );
 
     render() {
 
