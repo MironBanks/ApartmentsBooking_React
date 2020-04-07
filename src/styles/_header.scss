@@ -1,0 +1,42 @@
+@import './colors.scss';
+
+.navbar {
+    padding: 10px 30px;
+    background-color: transparent;
+
+    .navbar-brand{
+        margin-right: 100px;
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    .hab-search{
+        width: 300px;
+    }
+
+    .navbar-nav {
+        .active{
+            color: $main-app-color;
+        }
+    }
+
+    .nav-item{
+        margin-right: 20px;
+    }
+
+    .btn-personal{
+        text-decoration: none;
+        color: white;
+        border: 1px solid $main-app-color;
+        background-color: $main-app-color;
+        border-radius: 50px;
+        width: 150px;
+        text-align: center;
+        transition: 0.2s ease-out;
+
+        &:hover{
+            background-color: white;
+            color: $main-app-color;
+        }
+    }
+}
