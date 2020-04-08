@@ -1,14 +1,20 @@
 import React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 import Header from './components/shared/Header'
-import RentalHome from './pages/RentalHome'
+import Routes from './Routes'
+
 
 
 const App = () => {
+
+
     return (
-        <div>
-            <Header />
-            <RentalHome />
-        </div>
+        <>
+            <Router>
+                <Header />
+                <Routes />
+            </Router>
+        </>
     )
 }
 
