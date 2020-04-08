@@ -9,7 +9,7 @@ const Header = () => {
             <Link
                 className="navbar-brand"
                 to="/">
-                . HAB!CONdo
+                . YourFlats.no
             </Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>

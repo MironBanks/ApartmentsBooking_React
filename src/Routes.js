@@ -11,17 +11,19 @@ import Register from './pages/Register'
 const Routes = () => {
 
     return (
-        <Switch>
-            <Route exact path='/'>
-                <RentalHome />
-            </Route>
-            <Route path='/login'>
-                <Login />
-            </Route>
-            <Route path='/register'>
-                <Register />
-            </Route>
-        </Switch>
+        <div className='container main-container'>
+            <Switch>
+                <Route exact path='/'>
+                    <RentalHome />
+                </Route>
+                <Route path='/login'>
+                    <Login />
+                </Route>
+                <Route path='/register'>
+                    <Register />
+                </Route>
+            </Switch>
+        </div>
     )
 }
 
