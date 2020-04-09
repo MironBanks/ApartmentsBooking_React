@@ -1,22 +1,22 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { StateContext } from './state-context'
+import Provider from './store/Provider'
 import Header from './components/shared/Header'
 import Routes from './Routes'
-import store from './store/index'
+import { initStore } from './store/index'
 
 
-
+const store = initStore()
 const App = () => {
 
 
     return (
-        <StateContext.Provider value={store}>
+        <Provider store={store}>
             <Router>
                 <Header />
                 <Routes />
             </Router>
-        </StateContext.Provider>
+        </Provider>
     )
 }
 export default App
