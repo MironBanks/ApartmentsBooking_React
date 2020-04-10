@@ -8,7 +8,7 @@ import { rentalData } from '../data'
 const rentals = (state = [], action) => {
 
     if (action.type === 'FETCH_RENTALS') {
-        return rentalData
+        return action.rentals;
     } else {
         return state;
     }
