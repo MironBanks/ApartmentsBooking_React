@@ -5,8 +5,13 @@ import { createStore, combineReducers } from 'redux'
 
 export function initStore() {
     const reducers = combineReducers({
-        rentals: () => {
-            return rentalData;
+        rentals: (state = [], action) => {
+
+            if (action.type === 'FETCH_RENTALS') {
+                return rentalData
+            } else {
+                return state;
+            }
         }
     })
 
