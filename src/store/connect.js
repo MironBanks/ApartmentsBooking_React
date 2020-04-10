@@ -6,9 +6,10 @@ const connect = (selectState) => {
 
         class Connect extends React.Component {
             render() {
-                const state = this.context.getState()
+                const { getState, dispatch } = this.context;
+                const state = getState()
                 const slice = selectState(state)
-                return <Component {...slice}></Component>
+                return <Component {...slice} dispatch={dispatch}></Component>
             }
         }
         Connect.contextType = StateContext;

@@ -12,6 +12,7 @@ class RentalHome extends React.Component {
 
     componentDidMount() {
         const { rentals } = this.props;
+        this.props.dispatch({ type: 'WHATEVER' });
         this.setState({ rentals })
     }
 
