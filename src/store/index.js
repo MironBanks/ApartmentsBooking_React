@@ -1,18 +1,10 @@
-
-
-import { rentalData } from './data'
 import { createStore, combineReducers } from 'redux'
+import rentals from './reducers/rentals'
 
 export function initStore() {
     const reducers = combineReducers({
-        rentals: (state = [], action) => {
-
-            if (action.type === 'FETCH_RENTALS') {
-                return rentalData
-            } else {
-                return state;
-            }
-        }
+        rentals,
+        data1: () => ['1', '2']
     })
 
     const store = createStore(reducers)

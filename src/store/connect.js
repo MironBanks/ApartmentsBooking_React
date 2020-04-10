@@ -13,7 +13,12 @@ const connect = (selectState) => {
                     slice: selectState(context.getState())
                 }
 
-                context.subscribe(() => this.handleStateChange(context))
+                this.unsubscribe =
+                    context.subscribe(() => this.handleStateChange(context))
+            }
+
+            componentWillUnmount() {
+                this.unsubscribe()
             }
 
             handleStateChange = (context) => {
